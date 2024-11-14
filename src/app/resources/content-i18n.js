@@ -78,6 +78,7 @@ const createI18nContent = (t) => {
             experiences: [
                 {
                     company: 'FLY',
+                    companyImage: 'blah',
                     timeframe: t("about.work.experiences.FLY.timeframe"),
                     role: t("about.work.experiences.FLY.role"),
                     achievements: t("about.work.experiences.FLY.achievements").split(";"),
@@ -92,6 +93,7 @@ const createI18nContent = (t) => {
                 },
                 {
                     company: 'Creativ3',
+                    companyImage: 'blah',
                     timeframe: t("about.work.experiences.Creativ3.timeframe"),
                     role: t("about.work.experiences.Creativ3.role"),
                     achievements: t("about.work.experiences.Creativ3.achievements").split(";"),
@@ -105,10 +107,16 @@ const createI18nContent = (t) => {
             institutions: [
                 {
                     name: 'University of Jakarta',
+                    universityImage: 'blah', 
+                    timeframe:'blah',
+                    degree:'blah',
                     description: <>{t(`about.studies.institutions.University of Jakarta.description`)}</>,
                 },
                 {
                     name: 'Build the Future',
+                    universityImage: 'blah', 
+                    timeframe:'blah',
+                    degree:'blah',
                     description: <>{t("about.studies.institutions.Build the Future.description")}</>,
                 }
             ]
