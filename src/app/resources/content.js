@@ -1,19 +1,17 @@
-import { InlineCode } from "@/once-ui/components";
-
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Christian',
+    lastName:  'Gerber',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Senior Software Engineer',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  'America/Fort_Wayne',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: []  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
-    display: true,
+    display: false,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
     description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
 }
@@ -24,12 +22,12 @@ const social = [
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        link: 'https://github.com/gerber55555',
     },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
+        link: 'https://www.linkedin.com/in/christian-gerber-111152164/',
     },
     {
         name: 'X',
@@ -47,8 +45,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    headline: <>Christian Gerber <b/><b/> Full Stack Software Engineer</>,
+    subline: <>I'm Christian, a Senior Software Engineer at General Dynamics Mission Systems, where I bring Android and Angular applications to life.</>
 }
 
 const about = {
@@ -63,44 +61,54 @@ const about = {
         display: true
     },
     calendar: {
-        display: true,
+        display: false,
         link: 'https://cal.com'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>Christian is an Experienced Senior Software Engineer skilled in TypeScript, Angular, Java, and Python. Proven
+        track record in enhancing code quality, advocating Agile methodologies, and fostering
+        teamwork. Currently contributing to General Dynamics Mission Systems with a focus on
+        innovative solutions.</>
     },
     work: {
         display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'General Dynamics Mission Systems',
+                companyImage: '/images/general_dynamics_logo.jpg',
+                timeframe: 'NOV 2020 - Present',
+                role: 'Senior Software Engineer',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Demonstrated complete ownership over a multi-module command and control system, overseeing cross-functional teams to achieve program goals for a customer event, ensuring high-impact results and customer satisfaction.</>,
+                    <>Fostered collaboration across multiple teams, contributing to UX discussions, and developing practical lab testing tools such as startup scripts and message logs.</>,
+                    <>Championed mentorship by actively supporting new team members, including coaching and guiding a new intern to productivity, fostering a positive and productive team culture.</>,
+                    <>Recognized for consistently taking on challenging projects, driving solutions to complex design questions, and demonstrating a proactive approach in supporting system design integrity.</>
+
                 ],
-                images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
-                        width: 16,
-                        height: 9
-                    }
-                ]
+                images: []
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'Do it Best Corp',
+                timeframe: 'MAY 2020 - NOV 2020',
+                companyImage: '/images/do-it-best-logo-hammer.jpg',
+                role: 'Software Engineer',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Supported the modernization effort of warehouse management system, stream processing data from SQL databases to support real time updates.</>
                 ],
                 images: [ ]
+            },
+            {
+                company: 'Vocera Communications',
+                companyImage: '/images/vocera.jpg',
+                timeframe: 'MAY 2019 - DEC 2019',
+                role: 'Contract Platform Quality Ensurance Engineer/Intern',
+                achievements: [
+                    <>Developed automated test software using the Gherkin framework and Python to verify the integrity of the Vocera Platform </>,
+                ],
+                images: []
             }
         ]
     },
@@ -109,11 +117,17 @@ const about = {
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Jakarta',
+                name: 'University of Illinois',
+                universityImage: '/images/illinois.png',
+                degree:'M.S. Computer Science',
+                timeframe: 'AUG 2021 - MAY 2023',
                 description: <>Studied software engineering.</>,
             },
             {
-                name: 'Build the Future',
+                name: 'Purdue University Fort Wayne',
+                universityImage: '/images/purdue_university_fort_wayne_logo.jpg',
+                degree:'B.S. Computer Science',
+                timeframe: 'AUG 2017 - MAY 2020',
                 description: <>Studied online marketing and personal branding.</>,
             }
         ]
@@ -123,34 +137,44 @@ const about = {
         title: 'Technical skills',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+                title: 'Angular',
+                description: <>Supported development on multiple Angular web projects using TS. Including a mission planning tool using a Cesium map and an Intelligence and Electronic Warfare Tactical Proficency Trainer</>,
                 images: [
                     {
-                        src: '/images/projects/project-01/cover-02.jpg',
-                        alt: 'Project image',
+                        src: '/images/GeoSuite-Enemy-Movement_UAV-Screenshot.jpg',
+                        alt: 'Geosuite',
                         width: 16,
                         height: 9
                     },
                     {
-                        src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
+                        src: '/images/GeoSuite-Situational-Awareness-Screenshot.jpg',
+                        alt: 'Geosuite',
                         width: 16,
                         height: 9
                     },
                 ]
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+                title: 'Android',
+                description: <>Designed and developed a Command and Control Android application with serial device interfacing, SQL database management, and intuitive user interfaces, enabling seamless data storage and retrieval for complex system operations.</>,
                 images: [
                     {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
+                        src: '/images/4k-training-atak.jpg',
+                        alt: 'Atak',
                         width: 16,
-                        height: 9
+                        height: 12
                     },
                 ]
+            },
+            {
+                title: 'Java',
+                description: <>Proficient in Java development, including building Android applications and implementing Kafka stream processing for efficient, real-time data handling and integration.</>,
+                images: []
+            },
+            {
+                title: 'Python',
+                description: <>Skilled in Python development, with experience in writing test scripts to ensure software reliability and a foundational knowledge of machine learning concepts for data analysis and predictive modeling.</>,
+                images: []
             }
         ]
     }
@@ -176,79 +200,7 @@ const gallery = {
     label: 'Gallery',
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
-    // Images from https://pexels.com
-    images: [
-        { 
-            src: '/images/gallery/img-01.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-02.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-03.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-04.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-05.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-06.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-07.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-08.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-09.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-10.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-11.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-12.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-13.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-14.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-    ]
+    images: []
 }
 
 export { person, social, newsletter, home, about, blog, work, gallery };

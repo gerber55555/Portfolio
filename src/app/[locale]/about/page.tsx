@@ -113,14 +113,6 @@ export default function About(
                         <Avatar
                             src={person.avatar}
                             size="xl"/>
-                        <Flex
-                            gap="8"
-                            alignItems="center">
-                            <Icon
-                                onBackground="accent-weak"
-                                name="globe"/>
-                            {person.location}
-                        </Flex>
                         { person.languages.length > 0 && (
                             <Flex
                                 wrap
@@ -230,8 +222,11 @@ export default function About(
                                         <Flex
                                             fillWidth
                                             justifyContent="space-between"
-                                            alignItems="flex-end"
-                                            marginBottom="4">
+                                            alignItems="center"
+                                            marginBottom="8">
+                                            <Avatar
+                                                src={experience.companyImage}
+                                            />
                                             <Text
                                                 id={experience.company}
                                                 variant="heading-strong-l">
@@ -305,10 +300,30 @@ export default function About(
                                         key={`${institution.name}-${index}`}
                                         fillWidth gap="4"
                                         direction="column">
+                                        <Flex
+                                            fillWidth
+                                            justifyContent="space-between"
+                                            alignItems="center"
+                                            marginBottom="8">
+                                            <Avatar
+                                                src={institution.universityImage}
+                                            />
+                                            <Text
+                                                id={institution.name}
+                                                variant="heading-strong-l">
+                                                {institution.name}
+                                            </Text>
+                                            <Text
+                                                variant="heading-default-xs"
+                                                onBackground="neutral-weak">
+                                                {institution.timeframe}
+                                            </Text>
+                                        </Flex>
                                         <Text
-                                            id={institution.name}
-                                            variant="heading-strong-l">
-                                            {institution.name}
+                                            variant="body-default-s"
+                                            onBackground="brand-weak"
+                                            marginBottom="m">
+                                            {institution.degree}
                                         </Text>
                                         <Text
                                             variant="heading-default-xs"
